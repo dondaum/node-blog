@@ -1,9 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET welcome page. */
-router.get('/', function(req, res, next) {
-  res.render('welcome', { title: 'Welcome' });
-});
+
+// Require controller modules.
+
+const welcome_controller = require('../controllers/welcomeController.js');
+
+
+// Welcome ROUTES //
+// GET welcome page. //
+
+router.get('/', welcome_controller.index);
+
+router.get('/about', welcome_controller.about)
 
 module.exports = router;

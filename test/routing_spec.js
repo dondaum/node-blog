@@ -23,18 +23,6 @@ describe('Testing App routing', function() {
     });
   });
 
-  describe('GET the welcome routes', () => {
-    it('responds with status 200', (done) => {
-      chai.request(app)
-        .get('/welcome')
-        .end(function(err, res) {
-          expect(res).to.have.status(200);
-          done();
-        });
-    });
-  });
-
-
 });
 
 
