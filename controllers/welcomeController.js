@@ -1,4 +1,4 @@
-// Display list of all Authors.
+// Welcome routes.
 
 exports.index = function(req, res) {
     res.render('welcome/index', { title: 'Welcome' });
