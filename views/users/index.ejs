@@ -1,1 +1,23 @@
 <h1> All Users here </h1>
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>email</th>
+        <th>username</th>
+        <th>created_at</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(function(user) { %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.username %></td>
+        <td><%= user.createdAt %></td>
+      </tr>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <a class="btn btn-primary" href="/users/new" role="button">New User</a>
+</div>

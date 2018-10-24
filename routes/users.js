@@ -13,7 +13,12 @@ const users_controller = require('../controllers/usersController.js');
 
 router.get('/', users_controller.index);
 
-router.get('/new', users_controller.new)
+router.get('/new', users_controller.new);
+
+router.post('/create', users_controller.create);
+
+
+
 router.post('/login',
   passport.authenticate('local', { successRedirect: '/',
                                    failureRedirect: '/login',
